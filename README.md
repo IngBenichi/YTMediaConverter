@@ -1,56 +1,110 @@
 # Benichi ConvertMaster
 
-Este proyecto utiliza `PyQt5` y `yt_dlp` para crear una aplicación gráfica que descarga y convierte videos de YouTube.
+Una aplicación de escritorio desarrollada con **Python, PyQt5 y yt\_dlp** que permite **descargar y convertir videos de YouTube** en diferentes formatos y calidades.
 
-## Requisitos Previos
+---
 
-1. **Python 3.12.6 o superior** (asegúrate de que esté instalado).
-2. **`ffmpeg`**: Descárgalo y colócalo en la carpeta `bin` junto al proyecto, o asegúrate de que esté accesible desde el sistema.
+## ✨ Características Principales
 
-## Configuración del Entorno Virtual
+* 🎵 **Descarga en MP3** (conversión de video a audio usando `ffmpeg`).
+* 🎥 **Descarga en MP4** con selección de resolución (144p, 360p, 720p, etc.).
+* 🌐 **Navegador embebido** con `QWebEngineView` para explorar YouTube directamente desde la aplicación.
+* 📋 **Gestión de múltiples URLs**: agrega varios enlaces a la lista de descargas.
+* ⚡ **Multitarea con hilos (`QThread`)** para que la interfaz no se congele durante las descargas.
+* 📊 **Barra de progreso en tiempo real**.
+* 🔔 **Notificaciones emergentes** (con `QMessageBox`) para informar errores, progreso y finalización.
 
-1. Crea un entorno virtual:
+---
+
+## 📦 Requisitos Previos
+
+1. **Python 3.12.6 o superior**
+2. **`ffmpeg`** (colócalo en la carpeta `bin` del proyecto o agrega su ruta a las variables de entorno).
+
+---
+
+## ⚙️ Instalación y Configuración
+
+1. **Clona el repositorio**
+
+   ```bash
+   git clone https://github.com/tuusuario/benichi-convertmaster.git
+   cd benichi-convertmaster
+   ```
+
+2. **Crea un entorno virtual**
+
    ```bash
    python -m venv venv
    ```
 
-2. Activa el entorno virtual:
-   - En Windows:
+3. **Activa el entorno virtual**
+
+   * Windows:
+
      ```bash
      .\venv\Scripts\activate
      ```
-   - En macOS/Linux:
+   * macOS/Linux:
+
      ```bash
      source venv/bin/activate
      ```
 
-3. Instala las dependencias desde el archivo `requirements.txt`:
+4. **Instala las dependencias**
+
    ```bash
    pip install -r requirements.txt
    ```
 
-1. **Interfaz gráfica (GUI):**
-   - Permite buscar videos o pegar URLs de YouTube.
-   - Seleccionar la carpeta de salida para guardar los archivos descargados.
-   - Elegir el formato de descarga (MP3 o MP4).
-   - Seleccionar la resolución del video si se descarga en MP4 (opciones como 144p, 360p, 720p, etc.).
+---
 
-2. **Descarga y conversión:**
-   - Utiliza `yt_dlp` para gestionar la descarga de videos.
-   - Si se selecciona MP3, realiza un post-procesamiento con `ffmpeg` para extraer el audio.
-   - Muestra el progreso de la descarga en tiempo real con una barra de progreso.
+## 🚀 Uso
 
-3. **Manejo de múltiples URLs:**
-   - Permite agregar URLs a una lista de descarga.
-   - Valida que las URLs pertenezcan a YouTube.
+1. Ejecuta la aplicación:
 
-4. **Navegación web:**
-   - Incorpora un navegador embebido basado en `QWebEngineView` para explorar YouTube directamente desde la aplicación.
+   ```bash
+   python main.py
+   ```
+2. Desde la interfaz gráfica podrás:
 
-5. **Multitarea con hilos:**
-   - Usa `QThread` para realizar las descargas en segundo plano, evitando que la interfaz se congele.
+   * Navegar en YouTube o pegar el link de un video/canción.
+   * Elegir formato (MP3 o MP4).
+   * Seleccionar resolución (para MP4).
+   * Escoger la carpeta de destino.
+   * Seguir el progreso en tiempo real.
 
-6. **Notificaciones:**
-   - Muestra mensajes emergentes (con `QMessageBox`) para informar sobre errores, el estado de la descarga o su finalización.
+---
 
-En resumen, es un gestor de descargas sencillo y visual para YouTube, con soporte para audio y video en diferentes formatos y calidades.
+## 🖼️ Capturas de Pantalla
+
+### 1️⃣ Interfaz principal
+
+La aplicación en ejecución con el navegador embebido y la sección para pegar el enlace del video/canción.
+![Captura1](pictures/Captura1.JPG)
+
+### 2️⃣ Descarga en MP3 completada
+
+Un ejemplo de canción ya descargada.
+![Captura2](pictures/Captura2.JPG)
+
+### 3️⃣ Descarga en proceso (barra de progreso)
+
+Visualización del avance de descarga en tiempo real.
+![Captura3](pictures/Captura3.JPG)
+
+### 4️⃣ Descarga en MP4
+
+Ejemplo de un video descargándose en formato MP4.
+![Captura4](pictures/Captura4.JPG)
+
+### 5️⃣ Archivos guardados correctamente
+
+Los archivos descargados se almacenan correctamente en la ruta elegida por el usuario.
+![Captura5](pictures/Captura5.JPG)
+
+---
+
+## 📌 En Resumen
+
+**Benichi ConvertMaster** es un gestor de descargas sencillo y visual que combina **YouTube, PyQt5, yt\_dlp y ffmpeg** para ofrecer descargas rápidas y conversiones a múltiples formatos. Ideal para quienes buscan una herramienta ligera y práctica.
