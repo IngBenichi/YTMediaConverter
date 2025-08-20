@@ -28,8 +28,8 @@ Una aplicación de escritorio desarrollada con **Python, PyQt5 y yt\_dlp** que p
 1. **Clona el repositorio**
 
    ```bash
-   git clone https://github.com/tuusuario/benichi-convertmaster.git
-   cd benichi-convertmaster
+   git clone https://github.com/IngBenichi/YTMediaConverter
+   cd YTMediaConverter
    ```
 
 2. **Crea un entorno virtual**
